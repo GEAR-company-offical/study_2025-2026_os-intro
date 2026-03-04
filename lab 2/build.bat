@@ -8,21 +8,21 @@ REM =========================
 set "REPORT=report.md"
 set "SLIDES=slides.md"
 set "LINKS=links.md"
-set "DIST=dist"
+set "DIST=slides_and_reports"
 set "MARP=C:\Tools\marp-cli-v4.2.3-win\marp.exe"
 
 REM =========================
 REM CLEAN junk folders in root (never needed)
 REM =========================
-for %%D in ("DOCX" "PDF" "HTML" "dist)") do (
-  if exist %%D (
-    rmdir /s /q %%D 2>nul
-    del /q %%D 2>nul
+for %%D in ("DOCX" "PDF" "HTML") do (
+  if exist "%%~D" (
+    rmdir /s /q "%%~D" 2>nul
+    del /q "%%~D" 2>nul
   )
 )
 
 REM =========================
-REM PREP + CLEANUP (полная очистка dist)
+REM PREP + CLEANUP (полная очистка output folder)
 REM =========================
 if exist "%DIST%" (
   echo Cleaning %DIST% folder...
@@ -73,9 +73,9 @@ echo [3/7] Slides -> HTML (Marp)
 "%MARP%" "%SLIDES%" --html --allow-local-files -o "%DIST%\slides.html"
 if errorlevel 1 goto :fail
 
-REM --- Copy images so HTML works when you move dist/ somewhere else ---
+REM --- Copy images so HTML works when you move output folder somewhere else ---
 echo.
-echo [4/7] Copy images for HTML (src/assets -> dist)
+echo [4/7] Copy images for HTML (src/assets -> %DIST%)
 if exist src (
   if not exist "%DIST%\src" mkdir "%DIST%\src"
   xcopy "src" "%DIST%\src" /E /I /Y >nul
@@ -118,12 +118,11 @@ powershell -NoProfile -Command ^
   "Compress-Archive -Force -Path %ZIPLIST% -DestinationPath '%DIST%\sources.zip'"
 
 REM =========================
-REM Очистка временных файлов (только если они появились в dist)
+REM Очистка временных файлов (только если они появились в output folder)
 REM =========================
 echo.
 echo Checking for temporary files...
 del /q "%DIST%\*.aux" "%DIST%\*.log" "%DIST%\*.out" "%DIST%\*.tex" "%DIST%\*.toc" "%DIST%\*.nav" "%DIST%\*.snm" "%DIST%\*.vrb" 2>nul
-
 
 REM =========================
 REM POST-CLEAN (root folder only)
@@ -132,23 +131,21 @@ echo.
 echo Post-clean: remove junk in project root...
 
 REM 1) Remove stray folders created by wrong outputs
-for %%D in ("DOCX" "PDF" "HTML" "dist)") do (
-  if exist %%D (
-    rmdir /s /q %%D 2>nul
-    del /q %%D 2>nul
+for %%D in ("DOCX" "PDF" "HTML" "slides_and_reports)") do (
+  if exist "%%~D" (
+    rmdir /s /q "%%~D" 2>nul
+    del /q "%%~D" 2>nul
   )
 )
 
-REM 2) Remove common LaTeX/Pandoc temp files in ROOT (not inside dist)
+REM 2) Remove common LaTeX/Pandoc temp files in ROOT (not inside output folder)
 for %%E in (*.aux *.log *.out *.toc *.nav *.snm *.vrb *.synctex.gz *.tex) do (
   del /q "%%E" 2>nul
 )
 
-
-
 echo.
 echo =============================
-echo DONE ✅  Check dist\
+echo DONE ✅  Check %DIST%\
 echo =============================
 pause
 exit /b 0
