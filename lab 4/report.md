@@ -133,6 +133,8 @@ dnf install gitflow
 ```
 
 
+![alt text](src/image.png)
+
 
 
 ---
@@ -146,7 +148,9 @@ dnf install nodejs
 dnf install pnpm
 ```
 
-![alt text](src/image2.png)
+
+![alt text](src/image-1.png)
+
 
 ---
 
@@ -159,7 +163,9 @@ pnpm setup
 source ~/.bashrc
 ```
 
-![alt text](src/image3.png)
+
+![alt text](src/image-2.png)
+
 
 ---
 
@@ -179,7 +185,7 @@ pnpm add -g commitizen
 git cz
 ```
 
-![alt text](src/image4.png)
+![alt text](src/image-3.png)
 
 ---
 
@@ -191,8 +197,7 @@ git cz
 pnpm add -g standard-changelog
 ```
 
-![alt text](src/image5.png)
-
+![alt text](src/image-5.png)
 ---
 
 # Практический сценарий использования Git
@@ -214,7 +219,10 @@ git remote add origin git@github.com:<username>/git-extended.git
 git push -u origin main
 ```
 
-![alt text](src/image6.png)
+![alt text](src/image-7.png)
+
+
+![alt text](src/image-6.png)
 
 ---
 
@@ -244,7 +252,13 @@ pnpm init
 git cz
 ```
 
-![alt text](src/image7.png)
+![alt text](src/image-8.png)
+
+
+
+![alt text](src/image-9.png)
+
+
 
 ---
 
@@ -261,7 +275,8 @@ git flow init
 - main
 - develop
 
-![alt text](src/image8.png)
+![alt text](src/image-10.png)
+
 
 ---
 
@@ -299,7 +314,20 @@ git push --all
 git push --tags
 ```
 
-![alt text](src/image9.png)
+![alt text](src/image-11.png)
+
+
+
+![alt text](src/image-12.png)
+
+
+
+![alt text](src/image-13.png)
+
+
+![alt text](src/image-14.png)
+
+
 
 ---
 
@@ -311,7 +339,7 @@ git push --tags
 gh release create v1.0.0 -F CHANGELOG.md
 ```
 
-![alt text](src/image10.png)
+![alt text](src/image-15.png)
 
 ---
 
