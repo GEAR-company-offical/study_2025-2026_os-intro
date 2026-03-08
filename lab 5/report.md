@@ -94,6 +94,7 @@ sudo dnf install pass pass-otp
 
 ![alt text](src/image.png)
 
+
 ---
 
 ## Создание и проверка GPG ключа
@@ -151,7 +152,6 @@ pass example.com
 ```
 
 ![alt text](src/image-3.png)
-
 ---
 
 ## Установка программы chezmoi
@@ -174,7 +174,7 @@ sh -c "$(wget -qO- chezmoi.io/get)"
 chezmoi init git@github.com:GEAR-company-offical/dotfiles.git
 ```
 
-![alt text](src/image-5.png)
+![alt text](src/image-6.png)
 
 ---
 
@@ -192,7 +192,7 @@ chezmoi add ~/.bashrc
 chezmoi apply
 ```
 
-![alt text](src/image-6.png)
+![alt text](src/image-5.png)
 
 ---
 
