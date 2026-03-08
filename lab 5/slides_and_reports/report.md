@@ -92,7 +92,7 @@ chezmoi apply
 sudo dnf install pass pass-otp
 ```
 
-![alt text](src/image.png)
+![](src/image.png)
 
 
 ---
@@ -113,7 +113,7 @@ gpg --list-secret-keys
 gpg --full-generate-key
 ```
 
-![alt text](src/image-1.png)
+![](src/image-1.png)
 
 ---
 
@@ -131,7 +131,7 @@ pass init user@email
 ~/.password-store
 ```
 
-![alt text](src/image-2.png)
+![](src/image-2.png)
 
 ---
 
@@ -151,7 +151,7 @@ pass insert example.com
 pass example.com
 ```
 
-![alt text](src/image-3.png)
+![](src/image-3.png)
 ---
 
 ## Установка программы chezmoi
@@ -162,7 +162,7 @@ pass example.com
 sh -c "$(wget -qO- chezmoi.io/get)"
 ```
 
-![alt text](src/image-4.png)
+![](src/image-4.png)
 
 ---
 
@@ -174,7 +174,7 @@ sh -c "$(wget -qO- chezmoi.io/get)"
 chezmoi init git@github.com:GEAR-company-offical/dotfiles.git
 ```
 
-![alt text](src/image-6.png)
+![](src/image-6.png)
 
 ---
 
@@ -192,7 +192,7 @@ chezmoi add ~/.bashrc
 chezmoi apply
 ```
 
-![alt text](src/image-5.png)
+![](src/image-5.png)
 
 ---
 
