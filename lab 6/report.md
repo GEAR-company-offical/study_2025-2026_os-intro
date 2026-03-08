@@ -66,7 +66,8 @@ pwd
 
 Результат выполнения команды показывает абсолютный путь домашнего каталога пользователя.
 
-![](image.png)
+![](src/image.png)
+
 ---
 
 ## 2. Работа с системными каталогами
@@ -82,7 +83,7 @@ pwd
 
 Команда `pwd` позволяет убедиться, что переход был выполнен успешно.
 
-![](image-1.png)
+![](src/image-1.png)
 
 ---
 
@@ -108,33 +109,17 @@ ls -alF
 - `-l` — выводить подробную информацию о файлах
 - `-F` — показывать тип объектов файловой системы
 
+![](src/image-3.png)
 
+![](src/image-2.png)
 
-![](image-3.png)
+![](src/image-4.png)
 
+![](src/image-5.png)
 
+![](src/image-6.png)
 
-
-![](image-2.png)
-
-
-
-
-![](image-4.png)
-
-
-
-![](image-5.png)
-
-
-
-![](image-6.png)
-
-
-
-
-![](image-7.png)
-
+![](src/image-7.png)
 
 ---
 
@@ -149,7 +134,7 @@ ls /var/spool | grep cron
 
 Команда `grep` позволяет отфильтровать вывод и найти нужный каталог.
 
-![](image-8.png)
+![](src/image-8.png)
 
 ---
 
@@ -165,10 +150,7 @@ ls -l
 
 Команда `ls -l` выводит подробную информацию о файлах, включая владельца.
 
-![](image-10.png)
-
-
-
+![](src/image-10.png)
 
 ---
 
@@ -182,7 +164,8 @@ ls -l
 mkdir newdir
 ls
 ```
-![](image-11.png)
+
+![](src/image-11.png)
 
 ---
 
@@ -194,7 +177,7 @@ ls
 mkdir ~/newdir/morefun
 ```
 
-![](image-12.png)
+![](src/image-12.png)
 
 ---
 
@@ -213,7 +196,7 @@ ls
 rm -r letters memos misk
 ```
 
-![](image-13.png)
+![](src/image-13.png)
 
 ---
 
@@ -227,7 +210,7 @@ rm newdir
 
 Команда не выполняется, так как `rm` без параметров не удаляет каталоги.
 
-![](image-14.png)
+![](src/image-14.png)
 
 ---
 
@@ -240,7 +223,7 @@ rm -r ~/newdir/morefun
 ls ~/newdir
 ```
 
-![](image-15.png)
+![](src/image-15.png)
 
 ---
 
@@ -258,10 +241,7 @@ man ls
 ls -R
 ```
 
-
-![](image-16.png)
-
-
+![](src/image-16.png)
 
 ---
 
@@ -273,10 +253,7 @@ ls -R
 ls -lt
 ```
 
-
-![](image-17.png)
-
-
+![](src/image-17.png)
 
 ---
 
@@ -294,9 +271,7 @@ man rm
 
 В результате были изучены основные параметры и способы использования данных команд.
 
-![](image-18.png)
-
-
+![](src/image-18.png)
 
 ---
 
@@ -314,7 +289,7 @@ history
 !785
 ```
 
-![](image-19.png)
+![](src/image-19.png)
 
 ---
 
