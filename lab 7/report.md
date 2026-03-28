@@ -59,9 +59,9 @@ cd ~
 touch feathers
 mkdir play
 
-text
+ 
 
-![](src/step1.png)
+![](src/image.png)
 
 ---
 
@@ -72,34 +72,34 @@ mkdir australia
 chmod 744 australia
 ls -ld australia
 
-text
+ 
 
-![](src/step2_1.png)
+![](src/image-1.png)
 
 ### 2.2 Каталог `play` с правами `drwx--x--x` (711)
 chmod 711 play
 ls -ld play
 
-text
+ 
 
-![](src/step2_2.png)
+![](src/image-2.png)
 
 ### 2.3 Файл `my_os` с правами `-r-xr--r--` (544)
 touch my_os
 chmod 544 my_os
 ls -l my_os
 
-text
+ 
 
-![](src/step2_3.png)
+![](src/image-3.png)
 
 ### 2.4 Файл `feathers` с правами `-rw-rw-r--` (664)
 chmod 664 feathers
 ls -l feathers
 
-text
+ 
 
-![](src/step2_4.png)
+![](src/image-4.png)
 
 ---
 
@@ -108,104 +108,103 @@ text
 ### 3.1 Просмотр содержимого `/etc/passwd`
 cat /etc/passwd
 
-text
+ 
 
-![](src/step3_1.png)
+![](src/image-5.png)
 
 ### 3.2 Копирование `feathers` в `file.old`
 cp feathers file.old
 ls -l file.old
 
-text
+ 
 
-![](src/step3_2.png)
+![](src/image-6.png)
 
 ### 3.3 Перемещение `file.old` в каталог `play`
 mv file.old play/
 ls play/
 
-text
+ 
 
-![](src/step3_3.png)
-
+![](src/image-7.png)
 ### 3.4 Копирование каталога `play` в `fun`
 cp -r play fun
 ls -ld fun
 ls fun/
 
-text
+ 
 
-![](src/step3_4.png)
+![](src/image-8.png)
 
 ### 3.5 Перемещение `fun` в `play/games`
 mv fun play/games
 ls play/
 
-text
+ 
 
-![](src/step3_5.png)
+![](src/image-9.png)
 
 ### 3.6 Лишение права на чтение файла `feathers`
 chmod a-r feathers
 ls -l feathers
 
-text
+ 
 
-![](src/step3_6.png)
+![](src/image-10.png)
 
 ### 3.7 Попытка чтения `feathers`
 cat feathers
 
-text
+ 
 
 Команда завершилась с отказом в доступе, что соответствует ожиданию.
 
-![](src/step3_7.png)
+![](src/image-11.png)
 
 ### 3.8 Попытка копирования `feathers`
 cp feathers feathers_copy
 
-text
+ 
 
 Также получен отказ в доступе.
 
-![](src/step3_8.png)
+![](src/image-12.png)
 
 ### 3.9 Возврат права на чтение `feathers`
 chmod a+r feathers
 ls -l feathers
 
-text
+ 
 
-![](src/step3_9.png)
+![](src/image-13.png)
 
 ### 3.10 Лишение права на выполнение каталога `play`
 chmod a-x play
 ls -ld play
 
-text
+ 
 
-![](src/step3_10.png)
+![](src/image-14.png)
 
 ### 3.11 Попытка перехода в `play`
 cd play
 
-text
+ 
 
 Команда не выполнена из-за отсутствия права `x`. Возврат в домашний каталог:
 cd ~
 
-text
+ 
 
-![](src/step3_11.png)
+![](src/image-15.png)
 
 ### 3.12 Возврат права на выполнение `play`
 chmod a+x play
 ls -ld play
 
-text
+ 
 
-![](src/step3_12.png)
+![](src/image-16.png)
 
 ---
 
@@ -214,29 +213,29 @@ text
 ### 4.1 Просмотр смонтированных файловых систем
 mount
 
-text
+ 
 
 Вывод содержит информацию о смонтированных устройствах, точках монтирования, типах ФС и параметрах.
 
-![](src/step4_1.png)
+![](src/image-17.png)
 
 ### 4.2 Просмотр файла `/etc/fstab`
 cat /etc/fstab
 
-text
+ 
 
 Файл содержит описание автоматически монтируемых систем.
 
-![](src/step4_2.png)
+![](src/image-19.png)
 
 ### 4.3 Проверка использования диска
 df -h
 
-text
+ 
 
 Команда показывает занятое и свободное пространство на всех смонтированных ФС в удобном для чтения формате.
 
-![](src/step4_3.png)
+
 
 ### 4.4 Изучение справочной информации
 
@@ -246,7 +245,7 @@ man fsck
 man mkfs
 man kill
 
-text
+ 
 
 Краткое описание:
 
@@ -255,7 +254,7 @@ text
 - **mkfs** — создание файловой системы; пример: `mkfs.ext4 /dev/sdb1`
 - **kill** — отправка сигнала процессу; пример: `kill -9 1234`
 
-![](src/step4_4.png)
+![](src/image-18.png)
 
 ---
 
